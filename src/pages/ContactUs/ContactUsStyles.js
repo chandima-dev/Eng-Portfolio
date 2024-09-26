@@ -8,18 +8,17 @@ export const StyledContainer = styled.div`
   background-color: #f4f4f4;
   padding: 10px;
   margin-top: -100px;
-  position: relative;  // Ensure the element can be stacked with z-index
-  z-index: 10; // Adjust as needed to ensure it's above the slideshow
+  position: relative;
+  z-index: 10; // Ensure it stays above the slideshow
 
   @media (max-width: 768px) {
-    height: auto; // Adjust height for mobile
+    height: auto; // Adjust height for smaller screens
     margin-top: -250px;
     padding: 10px;
-    position: relative;  // Ensure the element can be stacked with z-index
-    z-index: 10; // Adjust as needed to ensure it's above the slideshow
+    position: relative;
+    z-index: 10;
   }
 `;
-
 
 export const StyledFormWrapperWithBorder = styled.div`
   display: flex;
@@ -28,17 +27,17 @@ export const StyledFormWrapperWithBorder = styled.div`
   max-width: 1000px;
   width: 100%;
   border: 3px solid transparent;
-  padding: 40px; // Padding to make the rectangle larger than content
-  transition: border-color 0.3s ease; // Smooth transition effect
+  padding: 40px;
+  transition: border-color 0.3s ease;
   background-color: black;
 
   &:hover {
-    border-color: #f9690e; // Change border to orange on hover
+    border-color: #f9690e; // Orange border on hover
   }
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse; // Stack form below the SVG on mobile
-    padding: 20px; // Reduce padding for mobile
+    flex-direction: column-reverse; // Stack form below image on mobile
+    padding: 20px;
   }
 `;
 
@@ -57,6 +56,7 @@ export const StyledFormSection = styled.div`
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #dddddd;
+
     &:focus {
       border-color: #00ce9e;
     }
@@ -80,21 +80,12 @@ export const StyledFormSection = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 90%; // Full width on mobile
-    margin-right:20px;
+    width: 90%; // Wider on mobile
+    margin-right: 20px;
 
     button {
-    width: 106%;
-    padding: 10px;
-    background-color: #f9690e;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 1px solid #dddddd;
-  }
-
+      width: 100%;
+    }
   }
 `;
 
@@ -112,49 +103,15 @@ export const StyledImageSection = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%; // Full width on mobile
-    margin-left: 0; // Remove left margin
-    margin-bottom: 1vh; // Add spacing between the image and the form
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1vh;
   }
 `;
 
-export const StyledSocialSection = styled.div`
-  margin-top: 30px; // Space above the social section
-  text-align: center;
-
-  p {
-    margin: ;
-    color: #ffffff;
-    font-size: 16px;
-  }
-
-  .social-icons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  a {
-    color: #f9690e;
-    text-decoration: none;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-
-    i {
-      margin-right: 8px;
-    }
-
-    &:hover {
-      color: #ffffff; // Hover color for social icons
-    }
-  }
-`;
-
-// Adding the new StyledFormHeader
 export const StyledFormHeader = styled.div`
   margin-bottom: 20px;
+
   h1 {
     font-size: 2.5rem;
     color: #f9690e;
@@ -162,8 +119,7 @@ export const StyledFormHeader = styled.div`
 
   @media (max-width: 768px) {
     h1 {
-      font-size: 2rem; // Slightly smaller font for mobile
-      
+      font-size: 2rem;
     }
   }
 `;
