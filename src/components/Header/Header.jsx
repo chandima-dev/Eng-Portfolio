@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './Header.module.css';
 import { FaFacebook, FaLinkedin, FaPhone, FaEnvelope, FaClock, FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,15 +36,15 @@ const Header = () => {
         </div>
         <div className={`${styles.navbar} ${isOpen ? styles.navOpen : ''}`}>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="/contactus">Contact Us</a></li>
+            <li><Link to="/">Home</Link></li> {/* Update this to your actual route */}
+            <li><Link to="/about">About Us</Link></li> {/* Update this if you have an About Us page */}
+            <li><Link to="/projects">Projects</Link></li> {/* Update this if you have a Projects page */}
+            <li><Link to="/contactus">Contact Us</Link></li>
           </ul>
         </div>
         <div className={styles.socialMedia}>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
         </div>
       </header>
     </div>
