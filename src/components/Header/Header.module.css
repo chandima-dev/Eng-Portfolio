@@ -3,8 +3,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: #181419;
-  padding: 10px 40px 20px;
+  padding: 1px 40px 20px;
   position: relative;
+  z-index: 10; 
 }
 
 .topBar {
@@ -15,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
+  margin-bottom: -10px;
 }
 
 .contactInfo {
@@ -134,26 +136,31 @@
   .header {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: -2%;
+    /* margin-bottom: -2%;
+    margin-top: 5%; */
   }
 
   .navbar {
-    max-height: 0;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
+    position: absolute; /* Position navbar absolutely */
+    top: 100px; /* Adjust as necessary to position it below the header */
+    left: 0;
+    right: 0;
+    background-color: #181419; /* Match the header's background */
+    z-index: 9; /* Set a lower z-index than the header */
+    max-height: 0; /* Initially hide it */
+    overflow: hidden; /* Prevent overflow */
+    transition: max-height 0.3s ease; /* Smooth transition */
+    background-color: #ffffff;
   }
-
   .navbar.navOpen {
-    max-height: none; /* Adjust this for the height of your dropdown */
+    max-height: 300px; /* Adjust this for the height of your dropdown */
   }
   .logo span {
     color: #FF7F00;
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 3%;
-    margin-top: 2%; 
+    margin-top: 5%; 
     padding-right: 20%;
   }
   .navbar ul {
@@ -170,9 +177,12 @@
   }
 
   .navbar ul li a {
-    padding: 10px;
+    color: #000000;
+    padding: 5px 20px;
     display: block;
     width: 100%;
+    font-size: 20px;
+    font-weight: bold;
   }
   .navbar ul li a:hover, .navbar ul li a:hover::after {
     color: #FF7F00;
@@ -200,6 +210,7 @@
     right: 40px;
     top: 35%; /* Adjust this value as needed to align with the 'Home' link */
     transform: translateY(-50%);
+    z-index: 11;
   }
   .openButton,
   .closeButton {
@@ -212,6 +223,6 @@
   }
 
   .closeButton {
-    margin-top: -100%;
+    margin-top: 40%;
   }
 }

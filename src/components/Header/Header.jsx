@@ -13,8 +13,8 @@ const Header = () => {
     <div>
       <div className={styles.topBar}>
         <div className={styles.contactInfo}>
-          <span><FaPhone /> (+94) 71 196 7228</span>
-          <span><FaEnvelope /> info@selck.com</span>
+          <span><FaPhone /> (+94) 70 590 1816</span>
+          <span><FaEnvelope /> info@chalk.com</span>
           <span><FaClock /> Mon - Fri: 8:00 - 17:30</span>
         </div>
       </div>
@@ -38,7 +38,7 @@ const Header = () => {
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="/contactus">Contact Us</a></li>
           </ul>
         </div>
         <div className={styles.socialMedia}>

@@ -63,13 +63,15 @@ export const StyledFormSection = styled.div`
   }
 
   button {
-    width: 100%;
+    width: 105%;
     padding: 10px;
     background-color: #f9690e;
     color: white;
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
   }
 
   label {
